@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11346370-E489-4C53-88DC-9ACBB1C52B14}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ELIZA</RootNamespace>
+    <AssemblyName>ELIZA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DawgSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=ffe65c5896ec5982, processorArchitecture=MSIL">
+      <HintPath>..\packages\DawgSharp.1.2.0\lib\net\DawgSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.Charsets.7.2.4630.5\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.Core.7.2.4630.5\lib\IKVM.OpenJDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.Security.7.2.4630.5\lib\IKVM.OpenJDK.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.SwingAWT.7.2.4630.5\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.Text.7.2.4630.5\lib\IKVM.OpenJDK.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.Util.7.2.4630.5\lib\IKVM.OpenJDK.Util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.OpenJDK.XML.API.7.2.4630.5\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.Runtime.7.2.4630.5\lib\IKVM.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=11.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.11.0.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jigsaw, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elkdanger.jigsaw.1.0.0.0\lib\net452\Jigsaw.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LemmaSharp, Version=4.12.5287.29676, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LemmaGenerator.1.1.0\lib\net20\LemmaSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="libsvm, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libsvm.net.2.1.8\lib\libsvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LIBSVM.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libsvm.net.2.1.8\lib\LIBSVM.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\AbstractEliza.cs" />
+    <Compile Include="Eliza.cs" />
+    <Compile Include="LanguageModel.cs" />
+    <Compile Include="Morphology\DawgEntropyClassModel.cs" />
+    <Compile Include="Morphology\Dawg\AbstractDawgDecorator.cs" />
+    <Compile Include="Morphology\Dawg\Builders\AbstractDacukBuilder.cs" />
+    <Compile Include="Morphology\Dawg\Builders\DawgBuilderDecorator.cs" />
+    <Compile Include="Morphology\Dawg\Builders\IDawgBuilder.cs" />
+    <Compile Include="Morphology\Dawg\Builders\IIncrementalDawgBuilder.cs" />
+    <Compile Include="Morphology\Dawg\Builders\IncrementalDawgBuilderDecorator.cs" />
+    <Compile Include="Morphology\Dawg\Builders\MappedDawgBuilder.cs" />
+    <Compile Include="Morphology\Dawg\Builders\OrderedDacukBuilder.cs" />
+    <Compile Include="Morphology\Dawg\Dawg.cs" />
+    <Compile Include="Morphology\Dawg\DAWGException.cs" />
+    <Compile Include="Morphology\Dawg\EndLinkedDawgNode.cs" />
+    <Compile Include="Morphology\Dawg\IDawg.cs" />
+    <Compile Include="Morphology\Dawg\IDawgNode.cs" />
+    <Compile Include="Morphology\Dawg\InnerDawgNode.cs" />
+    <Compile Include="Morphology\Dawg\MappedDawg.cs" />
+    <Compile Include="Morphology\Dawg\Utils\IMappingStrategy.cs" />
+    <Compile Include="Morphology\Dawg\Utils\IndexMapper.cs" />
+    <Compile Include="Morphology\Dawg\Utils\StateReferenceComparer.cs" />
+    <Compile Include="Morphology\Localisation.cs" />
+    <Compile Include="Morphology\TrieEntropyClassModel.cs" />
+    <Compile Include="Morphology\ICorporaReader.cs" />
+    <Compile Include="Morphology\IEntropyClassModel.cs" />
+    <Compile Include="Morphology\IStemmer.cs" />
+    <Compile Include="Morphology\Lexem.cs" />
+    <Compile Include="Morphology\MorphologyGroup.cs" />
+    <Compile Include="Morphology\MorphologyModel.cs" />
+    <Compile Include="Morphology\NGramm.cs" />
+    <Compile Include="Morphology\Node.cs" />
+    <Compile Include="Morphology\OpenCorporaName.cs" />
+    <Compile Include="Morphology\OpenCorporaReader.cs" />
+    <Compile Include="Morphology\RuPorterStemmer.cs" />
+    <Compile Include="Morphology\SparseNode.cs" />
+    <Compile Include="Morphology\SparseStringTrie.cs" />
+    <Compile Include="Morphology\Tag.cs" />
+    <Compile Include="Morphology\TagGroup.cs" />
+    <Compile Include="Morphology\TagNGramm.cs" />
+    <Compile Include="Morphology\TagTrie.cs" />
+    <Compile Include="Morphology\Trie.cs" />
+    <Compile Include="Morphology\Utils.cs" />
+    <Compile Include="Morphology\WordForm.cs" />
+    <Compile Include="Morphology\XMLReaderExtensions.cs" />
+    <Compile Include="Semantics\Converters\ConverterFactory.cs" />
+    <Compile Include="Semantics\Converters\IntegerConverter.cs" />
+    <Compile Include="Semantics\Converters\TimeUnitConverter.cs" />
+    <Compile Include="Semantics\Frame.cs" />
+    <Compile Include="Semantics\Converters\IConverter.cs" />
+    <Compile Include="Semantics\FrameSemanticsModel.cs" />
+    <Compile Include="Semantics\Converters\InformationUnitConverter.cs" />
+    <Compile Include="Semantics\ISemanticsModel.cs" />
+    <Compile Include="Semantics\Patterns\BranchedPattern.cs" />
+    <Compile Include="Semantics\Patterns\Builders\BranchedPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\ChainedPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\IPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\OrPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\RelationAndLemmaPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\SingleLemmaPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\SingleRelationPatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\Builders\SkipablePatternBuilder.cs" />
+    <Compile Include="Semantics\Patterns\ChainedPattern.cs" />
+    <Compile Include="Semantics\Patterns\ComplexPattern.cs" />
+    <Compile Include="Semantics\Patterns\IComplexPattern.cs" />
+    <Compile Include="Semantics\Patterns\ISyntaxPattern.cs" />
+    <Compile Include="Semantics\Patterns\MatchAnyPattern.cs" />
+    <Compile Include="Semantics\Patterns\OrPattern.cs" />
+    <Compile Include="Semantics\Patterns\Pattern.cs" />
+    <Compile Include="Semantics\Patterns\PatternGrammar.cs" />
+    <Compile Include="Semantics\Patterns\RelationAndLemmaPattern.cs" />
+    <Compile Include="Semantics\Patterns\SingleLemmaPattern.cs" />
+    <Compile Include="Semantics\Patterns\SingleRelationPattern.cs" />
+    <Compile Include="Semantics\Patterns\SkipablePattern.cs" />
+    <Compile Include="Semantics\AbstractSlot.cs" />
+    <Compile Include="Semantics\Slot.cs" />
+    <Compile Include="Semantics\SlotEventArgs.cs" />
+    <Compile Include="Semantics\SlotWithConvertibleDefaultValue.cs" />
+    <Compile Include="Semantics\SlotWithDefaultValue.cs" />
+    <Compile Include="Semantics\Synonims.cs" />
+    <Compile Include="Semantics\TaskFrame.cs" />
+    <Compile Include="Syntax\DeepRelations\AbstractDeepRelationConverter.cs" />
+    <Compile Include="Syntax\DeepRelations\Attributive1Converter.cs" />
+    <Compile Include="Syntax\DeepRelations\AttributiveConverter.cs" />
+    <Compile Include="Syntax\DeepRelations\Completive1Converter.cs" />
+    <Compile Include="Syntax\DeepRelations\Completive2Converter.cs" />
+    <Compile Include="Syntax\DeepRelations\DeepRelationName.cs" />
+    <Compile Include="Syntax\DeepRelations\IDeepRelationBuilder.cs" />
+    <Compile Include="Syntax\DeepRelations\PredicativeConverter.cs" />
+    <Compile Include="Syntax\DeepRelations\QuantitiveConverter.cs" />
+    <Compile Include="Syntax\DeepRelations\PrepositionalConverter.cs" />
+    <Compile Include="Syntax\DeepRelations\ServiceConverter.cs" />
+    <Compile Include="Syntax\DependencyGrammar.cs" />
+    <Compile Include="Syntax\DForm.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ISurfaceRelation.cs" />
+    <Compile Include="Syntax\ISyntaxModel.cs" />
+    <Compile Include="Syntax\LexicalSign.cs" />
+    <Compile Include="Syntax\SurfaceRelations\AbstractSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\Accessory1SSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\AdditionalComplementarySSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\AdverbalSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\AgentiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ApproximativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\Attributive1SSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\AttributiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ComparativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ComparavieCopredicativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\CompletivePredicativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ConjunctiveInfinitiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\CopularGenitiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\CorrelativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ElectiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\FirstCompletiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\FormulaSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\HomogeniousSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\IndicativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\InfinitiveModalSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\IntroductorySSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\PredicativeSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\PredicativeWeakSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\PrepositionalSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\QuantitiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\RestrictiveSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\ServiceSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\TargetedSSR.cs" />
+    <Compile Include="Syntax\SurfaceRelations\SurfaceRelationName.cs" />
+    <Compile Include="Syntax\SurfaceRelations\SurfaceRelationType.cs" />
+    <Compile Include="Syntax\SurfaceRelations\SurfaceRelationUsage.cs" />
+    <Compile Include="Syntax\SurfaceRelations\SurfaceRelationUseCase.cs" />
+    <Compile Include="Syntax\Tree.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntax\SyntaxModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Classes\7zip\Compress\LzmaAlone\LzmaAlone.csproj" />
+    <Content Include="Classes\7zip\Compress\LzmaAlone\LzmaAlone.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OGESolver\OGESolver.csproj">
+      <Project>{8fff7613-ca1f-4d1d-870c-8fa64f7a9cbd}</Project>
+      <Name>OGESolver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrLanguages\PrLanguages.csproj">
+      <Project>{0f95fb6f-a5eb-4542-bd00-0c55056e111e}</Project>
+      <Name>PrLanguages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

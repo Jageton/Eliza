@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F95FB6F-A5EB-4542-BD00-0C55056E111E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrLanguages</RootNamespace>
+    <AssemblyName>PrLanguages</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jigsaw, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elkdanger.jigsaw.1.0.0.0\lib\net452\Jigsaw.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Expressions\Associativity.cs" />
+    <Compile Include="Expressions\BinaryOperator.cs" />
+    <Compile Include="Expressions\Constant.cs" />
+    <Compile Include="Expressions\Expression.cs" />
+    <Compile Include="Expressions\ExpressionHelper.cs" />
+    <Compile Include="Expressions\IndexerCaller.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Expressions\FunctionCall.cs" />
+    <Compile Include="Expressions\Operator.cs" />
+    <Compile Include="Expressions\UnaryOperator.cs" />
+    <Compile Include="Expressions\Variable.cs" />
+    <Compile Include="Grammars\AlgLanguageGrammar.cs" />
+    <Compile Include="Grammars\BasicGrammar.cs" />
+    <Compile Include="Grammars\ExpressionsGrammar.cs" />
+    <Compile Include="Grammars\PascalGrammar.cs" />
+    <Compile Include="Interpreters\Builders\AlgArray.cs" />
+    <Compile Include="Interpreters\AlgLanguageInterpreter.cs" />
+    <Compile Include="Interpreters\Builders\AlgLanguageDeclarationBuilder.cs" />
+    <Compile Include="Interpreters\Builders\AssignmentBuilder.cs" />
+    <Compile Include="Interpreters\Builders\BasicDeclartionBuilder.cs" />
+    <Compile Include="Interpreters\Builders\ForCycleBuilder.cs" />
+    <Compile Include="Interpreters\Builders\IfStatementBuilder.cs" />
+    <Compile Include="Interpreters\Builders\IStatementBuilder.cs" />
+    <Compile Include="Interpreters\Builders\PascalDeclarationBuilder.cs" />
+    <Compile Include="Interpreters\Interpreter.cs" />
+    <Compile Include="Interpreters\Statements\IndexerAssignment.cs" />
+    <Compile Include="Interpreters\Statements\VariableAssignment.cs" />
+    <Compile Include="Interpreters\Statements\Declaration.cs" />
+    <Compile Include="Interpreters\Statements\ForCycleWithIndexer.cs" />
+    <Compile Include="Interpreters\Statements\ForCycleWithVariable.cs" />
+    <Compile Include="Interpreters\Statements\IfStatement.cs" />
+    <Compile Include="Interpreters\Statements\Statement.cs" />
+    <Compile Include="Interpreters\VariableManagers\InMemoryManager.cs" />
+    <Compile Include="Interpreters\VariableManagers\IVariableManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
