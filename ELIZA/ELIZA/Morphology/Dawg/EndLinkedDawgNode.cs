@@ -25,7 +25,7 @@ namespace ELIZA.Morphology.Dawg
         public override TValue Value
         {
             get { return value; }
-            protected  set { this.value = value; }
+            set { this.value = value; }
         }
         /// <summary>
         /// Gets a value indicating whether this instance has value.
