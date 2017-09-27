@@ -40,7 +40,7 @@ namespace ELIZA.Morphology.Dawg
         public virtual TValue Value
         {
             get { return default(TValue); }
-            protected set 
+            set 
             {
                 //do nothing for memory purposese
             }
